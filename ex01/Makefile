@@ -6,15 +6,16 @@
 #    By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 16:53:34 by rnovotny          #+#    #+#              #
-#    Updated: 2026/02/26 12:57:23 by rnovotny         ###   ########.fr        #
+#    Updated: 2026/02/26 16:38:17 by rnovotny         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
+NAME = form
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 SRCS = main.cpp \
-		Bureaucrat.cpp
+		Bureaucrat.cpp \
+		Form.cpp
 OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 

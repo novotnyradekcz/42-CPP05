@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:35:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/02/26 13:11:02 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/02/26 16:42:08 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,19 @@ void Bureaucrat::incrementGrade()
 void Bureaucrat::decrementGrade()
 {
 	setGrade(_grade + 1);
+}
+
+void Bureaucrat::signForm(Form &f) const
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << *this << " signed " << f << std::endl;
+	}
+	catch (const std::exception &e)
+	{
+		std::cout << *this << " couldn't sign " << f << " because " << e.what() << std::endl;
+	}
 }
 
 void Bureaucrat::setGrade(int grade)
