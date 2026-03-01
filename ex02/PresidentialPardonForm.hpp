@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 21:52:32 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/02/27 22:02:39 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/03/01 08:00:42 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class PresidentialPardonForm : public AForm
 {
 	public:
+		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string &target);
 		PresidentialPardonForm(const PresidentialPardonForm &other);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);

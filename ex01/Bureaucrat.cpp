@@ -6,11 +6,16 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:35:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/02/26 16:42:08 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/03/01 07:56:37 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
+{
+	std::cout << "Bureaucrat " << _name << " created with default grade " << _grade << std::endl;
+}
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 {
@@ -24,7 +29,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade)
 {
-	std::cout << "Bureaucrat " << _name << " copied with grade " << _grade << std::endl;
+	std::cout << *this << " copied" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
@@ -32,14 +37,14 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
 	if (this != &other)
 	{
 		_grade = other._grade;
-		std::cout << "Bureaucrat " << _name << " assigned with grade " << _grade << std::endl;
+		std::cout << *this << " assigned" << std::endl;
 	}
 	return *this;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Bureaucrat " << _name << " destroyed" << std::endl;
+	std::cout << *this << " destroyed" << std::endl;
 }
 
 const std::string &Bureaucrat::getName() const

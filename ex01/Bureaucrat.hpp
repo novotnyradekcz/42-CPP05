@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/29 17:35:16 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/02/26 16:42:43 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/03/01 07:57:21 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Form;
 class Bureaucrat
 {
 	public:
+		Bureaucrat();
 		Bureaucrat(const std::string &name, int grade);
 		Bureaucrat(const Bureaucrat &other);
 		Bureaucrat &operator=(const Bureaucrat &other);

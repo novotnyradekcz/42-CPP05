@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/17 21:40:35 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/02/26 13:11:26 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/03/01 07:44:53 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,27 @@ int main()
 {
 	try
 	{
-		Bureaucrat b1("Alice", 1);
-		Bureaucrat b2("Bob", 150);
-		std::cout << b1 << std::endl;
-		std::cout << b2 << std::endl;
-		b1.incrementGrade();
+		Bureaucrat *b1 = new Bureaucrat("Alice", 1);
+		Bureaucrat *b2 = new Bureaucrat("Bob", 150);
+		Bureaucrat *b3 = new Bureaucrat();
+		std::cout << *b1 << std::endl;
+		std::cout << *b2 << std::endl;
+		std::cout << *b3 << std::endl;
+		b1->incrementGrade();
+	}
+	catch (const std::exception &e)
+	{
+		std::cerr << "Exception: " << e.what() << std::endl;
+	}
+
+	try
+	{
+		Bureaucrat b3("Charlie", 2);
+		std::cout << b3 << std::endl;
+		b3.incrementGrade();
+		std::cout << "After increment: " << b3 << std::endl;
+		b3.decrementGrade();
+		std::cout << "After decrement: " << b3 << std::endl;
 	}
 	catch (const std::exception &e)
 	{
