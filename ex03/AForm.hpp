@@ -22,8 +22,8 @@ class Bureaucrat;
 class AForm
 {
 	public:
-	AForm();	
-	AForm(const std::string &name, int signGrade, int executeGrade);
+		AForm();	
+		AForm(const std::string &name, int signGrade, int executeGrade);
 		AForm(const AForm &other);
 		AForm &operator=(const AForm &other);
 		virtual ~AForm();
