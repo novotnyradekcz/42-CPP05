@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/27 21:53:18 by rnovotny          #+#    #+#             */
-/*   Updated: 2026/03/01 08:01:43 by rnovotny         ###   ########.fr       */
+/*   Updated: 2026/03/13 14:00:23 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void RobotomyRequestForm::executeAction() const
 {
 	std::cout << "* DRILLING NOISES * Bzzzzzz... Whirrrr... Bzzzzzz..." << std::endl;
 	
-	if (rand() % 2 == 0)
+	if (std::rand() % 2 == 0)
 		std::cout << _target << " has been robotomized successfully!" << std::endl;
 	else
 		std::cout << "Robotomy failed on " << _target << "!" << std::endl;
